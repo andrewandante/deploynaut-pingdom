@@ -18,7 +18,8 @@ class Pingdom extends Object
 
     private $apiURL = 'https://api.pingdom.com/api/2.0/';
 
-    public function __construct() {
+    public function __construct()
+    {
         if(defined('PINGDOM_USERNAME')) {
             $this->username = PINGDOM_USERNAME;
         }
@@ -54,7 +55,7 @@ class Pingdom extends Object
 
     public function getAppKey() {
         if(!$this->appKey) {
-            throw new LogicException("Pingdom app key not set! Define PINGDOM_APPIKEY or use Injector to set app key");
+            throw new LogicException("Pingdom app key not set! Define PINGDOM_APIKEY or use Injector to set app key");
         }
         return $this->appKey;
     }
