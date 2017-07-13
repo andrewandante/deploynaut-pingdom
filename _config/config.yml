@@ -3,3 +3,6 @@ Name: deploynaut-pingdom
 After:
   - '#deploynautroutes'
 ---
+Injector:
+  PingdomClient:
+    factory: 'ClientFactory'
