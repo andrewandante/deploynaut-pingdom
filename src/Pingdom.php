@@ -34,7 +34,7 @@ class Pingdom extends \Object
             $this->appKey = PINGDOM_API_KEY;
         }
 
-        $this->checks = new PingdomChecks($this->client);
+        $this->checks = new PingdomChecks($this);
     }
 
     public function getUsername()
